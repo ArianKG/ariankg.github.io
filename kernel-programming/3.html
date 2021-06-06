@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <p>This function will print string:</p>
+    <code>
+        <pre>
+void printcol_str(char *str, unsigned char fg, unsigned char bg, int x, int y)
+{
+    int i = 0;
+    while (str[i])
+    {
+        printcol_char(str[i], fg, bg, cursor_x + i, cursor_y);
+        i++;
+    }
+}</pre>
+    </code>
+  </body>
+</html>
