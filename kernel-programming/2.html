@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <p>This function will print character:</p>
+    <code>
+        <pre>
+void printcol_char(char c, unsigned char fg, unsigned char bg, int x, int y)
+{
+    unsigned short attrib = (bg << 4) | (fg & 0x0F);
+    unsigned short *position;
+    position = (unsigned short *)0xB8000 + (y * 80 + x);
+    *position = c | (attrib << 8);
+}</pre>
+    </code>
+  </body>
+</html>
